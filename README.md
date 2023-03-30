@@ -10,7 +10,7 @@ O script de backup para vm em servidor com xenserver ou xcp automatiza o procedi
 * 3 - configurar o cron e descomentar o trecho onde informa o dia da semana.
 * 4 - informar no script o nome das vms, para registrar no backup, UUID da mesma, estado se on ou off, informar o diretório de backup.
 
-'''
+```
 DIRETORIO DE BACKUP
 DIR_BACKUP="DIRETORIO ONDE SERÁ FEITO O BACKUP"
 
@@ -31,11 +31,12 @@ ESTADO=(
 'on'
 'off'
 )
-'''
+```
 
 ### Obs.
 O script pode ser executado manualmente, caso queira monitorar a execução, apenas deixe comentado o trecho onde deve informar o dia da semana para que ele seja executado, condição.
-'''
+
+```
 PEGANDO O DIA DA SEMANA
 DIA_SEMANA=$(date +%w)
 
@@ -43,4 +44,4 @@ A SEMANA VAI DE 0 A 6, ONDE 0 É DOMINGO E 6 É SÁBADO, CASO UTILIZE EM COMBINA
 if [ $DIA_SEMANA -eq 6 ]; then
 ...
 fi
-'''
+```
